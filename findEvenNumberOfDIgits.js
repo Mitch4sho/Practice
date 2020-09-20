@@ -21,7 +21,7 @@
 
 
 var input = [12, 345, 2, 6, 7896];
-
+w
 var findNumbers = function (nums) {
     var numberWEvenDigits = 0;
     for (var i = 0; i < nums.length; i++) {
@@ -40,19 +40,3 @@ var findNumbers = function (nums) {
 };
 
 findNumbers(input);
-
-
-
-
-
-// function digits_count(n) {
-//     var count = 0;
-//     if (n >= 1) ++count;
-
-//     while (n / 10 >= 1) {
-//         n /= 10;
-//         ++count;
-//     }
-
-//     return count;
-// }
