@@ -9,30 +9,32 @@
 
 var array = [1, 0, 1];
 
-// var findMaxConsecutiveOnes = function (nums) {
-//     var consecutiveCount = 0;
-//     var largest = 0;
-//     for (var i = 0; i < nums.length; i++) {
-//         if (nums.length <= 3 && nums[i] == 1) {
-//             consecutiveCount++;
-//             largest = consecutiveCount;
-//         }
-//         if (nums[i - 1] == 1 && nums[i] == 1) {
-//             if (consecutiveCount == 0) {
-//                 consecutiveCount++;
-//             }
-//             consecutiveCount++;
 
-//             if (consecutiveCount > largest) {
-//                 largest = consecutiveCount;
-//             }
-//         } else {
-//             consecutiveCount = 0;
-//         }
-//     }
-//     return (largest);
-// };
-// findMaxConsecutiveOnes(array);
+// my solution 
+var findMaxConsecutiveOnes = function (nums) {
+    var consecutiveCount = 0;
+    var largest = 0;
+    for (var i = 0; i < nums.length; i++) {
+        if (nums.length <= 3 && nums[i] == 1) {
+            consecutiveCount++;
+            largest = consecutiveCount;
+        }
+        if (nums[i - 1] == 1 && nums[i] == 1) {
+            if (consecutiveCount == 0) {
+                consecutiveCount++;
+            }
+            consecutiveCount++;
+
+            if (consecutiveCount > largest) {
+                largest = consecutiveCount;
+            }
+        } else {
+            consecutiveCount = 0;
+        }
+    }
+    return (largest);
+};
+findMaxConsecutiveOnes(array);
 
 
 // Solutions I found online
